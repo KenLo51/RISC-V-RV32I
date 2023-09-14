@@ -7,6 +7,7 @@
     - <img src="https://i.imgur.com/XOOqGEV.jpg" width="637" height="241" />
 2. Pipelined
     - 40%
+    - <img src="https://i.imgur.com/2GGB5rR.jpg" width="637" height="251" />
 3. Scoreboarding
     - 0%
 4. Tomasulo
