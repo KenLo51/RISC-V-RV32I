@@ -1,6 +1,18 @@
 # RISC-V-RV32I
 計算機組織與結構練習
 
+## 進度
+1. Single cycle
+    - 2023/08/14
+    - <img src="https://i.imgur.com/XOOqGEV.jpg" width="637" height="241" />
+2. Pipelined
+    - 60% 剩forwarding
+    - <img src="https://i.imgur.com/2GGB5rR.jpg" width="637" height="251" />
+3. Scoreboarding
+    - 0%
+4. Tomasulo
+    - 0%
+
 ## RV32I Instructions  
 R-type  
 | [31:25] | [24:20] | [19:15] | [14:12] |  [11:7] |  [6:0] | | | 
@@ -68,16 +80,3 @@ J-type
 | :-: | :-: | :-: | :- | :- |
 | imm[20\|10:1\|11\|19:12] | rd | opcode | Mnemonic | Description |
 | imm[20\|10:1\|11\|19:12] | rd | 1101111 | JAL | rd=PC+4<br>PC=PC+imm |
-
-
-## 進度
-1. Single cycle
-    - 2023/08/14
-    - <img src="https://i.imgur.com/XOOqGEV.jpg" width="637" height="241" />
-2. Pipelined
-    - 60% 剩forwarding
-    - <img src="https://i.imgur.com/2GGB5rR.jpg" width="637" height="251" />
-3. Scoreboarding
-    - 0%
-4. Tomasulo
-    - 0%
