@@ -1,0 +1,59 @@
+
+
+fibonacci_number_recursion:
+    addi t1, a0, 0
+
+    add  a2, x0, t1 #Setting function arguments
+    jal  ra, fib_rec #Jump to function
+    addi t1, a0, 0#Get return value
+    addi a0, t1, 0#Move to return value reg
+    jal  x0, done
+
+
+
+#fib_rec(a2:int)
+fib_rec:
+    #Saving return address
+    sw   ra, 0(sp)
+    addi sp, sp, 4
+    #Saving temporaries registers
+    sw   t1, 0(sp)
+    sw   t2, 4(sp)
+    sw   t3, 8(sp)
+    addi sp, sp, 12
+
+    addi t1, x0, 2 #For compare less than 2
+    addi a0, a2, 0 #Setting return value before return
+    blt  a2, t1, fib_ret
+
+  
+    addi t1, a2, 0#Copy function input argument
+
+    addi t1, t1, -1
+    #callfib_rec(t1)
+    add  a2, x0, t1#Setting function arguments
+    jal  ra, fib_rec #Jump to function
+    addi t2, a0, 0#Get return value
+
+    addi t1, t1, -1
+    #call fib_rec(t1)
+    add  a2, x0, t1#Setting function arguments
+    jal  ra, fib_rec #Jump to function
+    addi t3, a0, 0#Get return value
+
+    #Add 2 val
+    add a0, t2, t3
+    
+    #Return
+fib_ret:
+    #Loading temporaries registers
+    addi sp, sp, -12
+    lw   t1, 0(sp)
+    lw   t2, 4(sp)
+    lw   t3, 8(sp)
+    #Loading return address
+    addi sp, sp, -4
+    lw   ra, 0(sp)
+    jalr x0, ra, 0
+
+done:
