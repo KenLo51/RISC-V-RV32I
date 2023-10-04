@@ -4,7 +4,7 @@
 ## 進度
 1. Single cycle
     - 2023/08/14
-    - <img src="https://i.imgur.com/XOOqGEV.jpg" width="637" height="241" />
+    ![](https://i.imgur.com/wQzhOCH.png)
 2. Pipelined
     - 2023/09/24
     - <img src="https://i.imgur.com/2GGB5rR.jpg" width="637" height="251" />
